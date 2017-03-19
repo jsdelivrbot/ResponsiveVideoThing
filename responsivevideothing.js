@@ -1,11 +1,11 @@
+// ResponsiveVideoThing.js: Makes video player iframes responsive using brute force
+// Like FitVids.js but without jQuery
+// With thanks to https://github.com/chriscoyier/Fluid-Width-Video
+
 document.addEventListener('DOMContentLoaded', function () {
 
-// ResponsiveVideo.js: Make your video player Things responsive
-// Like FitVids.js but without jQuery
-// Inspired by https://github.com/chriscoyier/Fluid-Width-Video
-
 // Find all YouTube and Vimeo video embed
-var allVideos = document.querySelectorAll('iframe[src*=youtube], iframe[src*=vimeo]')
+var allVideos = document.querySelectorAll('iframe[src*=youtube], iframe[src*=vimeo], iframe[src*=kickstarter]')
 
 // The element that is fluid width
 var article = document.getElementsByTagName("article").item(0);
@@ -14,12 +14,12 @@ var article = document.getElementsByTagName("article").item(0);
 for(i = 0;i < allVideos.length; i++) {
 	var videoThing = allVideos.item(i);
 	videoThing.setAttribute('data-aspect-ratio', videoThing.height / videoThing.width);
-    videoThing.removeAttribute('height');
-    videoThing.removeAttribute('width');
+	videoThing.removeAttribute('height');
+	videoThing.removeAttribute('width');
 }
 
 function resizeVideoThings() {
-	var newWidth = article.offsetWidth;
+	var newWidth = article.offsetWidth - 300;
 	// Resize all videos according to their own aspect ratio
 	for(i = 0;i < allVideos.length; i++) {
 		var aspectRatio = allVideos.item(i).getAttribute('data-aspect-ratio');
@@ -28,7 +28,7 @@ function resizeVideoThings() {
 	};
 }
 
-// When the window is resized, do the videoThing
+// When the window is resized, do the ResponsiveVideoThing
 window.onresize=function() {
 	resizeVideoThings();
 }

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 var allVideos = document.querySelectorAll('iframe[src*=youtube], iframe[src*=vimeo], iframe[src*=kickstarter]')
 
 // The element that is fluid width
-var article = document.getElementsByTagName("article").item(0);
+var article = document.getElementsByTagName("h1").item(0);
 
 // Figure out and save aspect ratio for each video
 for(i = 0;i < allVideos.length; i++) {
@@ -19,7 +19,7 @@ for(i = 0;i < allVideos.length; i++) {
 }
 
 function resizeVideoThings() {
-	var newWidth = article.offsetWidth - 300;
+	var newWidth = article.offsetWidth;
 	// Resize all videos according to their own aspect ratio
 	for(i = 0;i < allVideos.length; i++) {
 		var aspectRatio = allVideos.item(i).getAttribute('data-aspect-ratio');

@@ -4,7 +4,10 @@ Makes embedded videos responsive using only javascript
 Supported video players:
 * YouTube
 * Vimeo
-* TODO: Kickstarter
+* Kickstarter
+
+Todo:
+* Method to set target element for article
 
 Put this in your `<head>`:  
 

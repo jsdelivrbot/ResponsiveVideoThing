@@ -59,6 +59,12 @@
           "user": "j-greig",
           "repo": "ResponsiveVideoThing"
         }
+      ],
+      "links": [
+        {
+          "href": "http://greig.cc/",
+          "text": "James Greig"
+        }
       ]
     },
     {

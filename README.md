@@ -11,4 +11,4 @@ Todo:
 
 Put this in your `<head>`:  
 
-`<script src="https://cdn.rawgit.com/j-greig/ResponsiveVideoThing/master/responsivevideothing.js"></script>`
+`<script src="https://cdn.jsdelivr.net/gh/j-greig/ResponsiveVideoThing/responsivevideothing.js"></script>`
